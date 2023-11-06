@@ -1,4 +1,4 @@
 langchain
-cohere
+google-generativeai
 streamlit
 wikipedia
