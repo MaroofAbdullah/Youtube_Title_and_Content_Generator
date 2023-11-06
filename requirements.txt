@@ -1,3 +1,4 @@
 langchain
 cohere
 streamlit
+wikipedia
