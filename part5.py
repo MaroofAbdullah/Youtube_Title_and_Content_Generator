@@ -1,10 +1,9 @@
 import streamlit as st
-from langchain.llms import Cohere
+from langchain.llms import GooglePalm
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.memory import ConversationBufferMemory
 from langchain.utilities import WikipediaAPIWrapper
-COHERE_API_KEY = "LvCz1r5ZjH0kOl9i7Zkn2MdBFmIzjJMT4X3ZAt5x"
 
 st.title("Youtube Video Script Generator with LangChain 🦜🔗")
 
@@ -18,7 +17,7 @@ script_template=PromptTemplate(input_variables=["title","wikipedia_research"],
 title_memory = ConversationBufferMemory(input_key='topic', memory_key='chat_history')
 script_memory = ConversationBufferMemory(input_key='title', memory_key='chat_history')
 
-llm = Cohere(cohere_api_key=COHERE_API_KEY)
+llm = GooglePalm(google_api_key="AIzaSyDC8SjEOpXsxFteBK3Cb1tZVhdQF2Ky0Kg", temperature=0.1)
 title_chain=LLMChain(llm=llm, prompt=title_template, verbose=True, output_key='title', memory=title_memory)
 script_chain=LLMChain(llm=llm, prompt=script_template, verbose=True, output_key='script', memory=script_memory)
 
