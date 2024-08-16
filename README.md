@@ -1,7 +1,7 @@
-# Youtube_title_-_script_Generator
+# Youtube_Title_Script_Generator
 
 Given a topic,
-the model will generate the title as well as the script for the youtube video.
+the model will generate the titles as well as the scripts for the youtube video.
 
 
 Link->https://youtubetitle-scriptgenerator.streamlit.app/
